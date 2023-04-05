@@ -1,0 +1,1685 @@
+body {
+    background: rgba(237, 238, 216, 0.85);
+    margin: 0; 
+    font-family: system-ui;
+    display: grid;
+	grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/*====== FOOTER ======*/
+.footer{
+    width: 100%;
+    background-color: #121b47;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    font-size:80%;
+}
+.info{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.info a{
+    color: #fff;
+    text-decoration: none;
+}
+.info a:hover{
+    color: red;
+}
+.contact{
+    width: 25%;
+    text-align: center;
+}
+.contact ul{
+    list-style: none;
+}
+.paiement{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.livraison{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    /* ============= Page d'accueil =============== */
+
+.header{
+   background: #121b47;
+    display: flex;
+    color: #fff;
+    width: 100%;
+    
+}
+.Slogan{
+    width: 20%;
+    font-size: x-large;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+.navigation{
+    justify-content: flex-end;
+    align-items: center;
+    width: 75%;  
+    column-gap: 2%;
+    display: flex;
+}
+.navMobile{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    
+}
+        /*=== button style ===*/
+.navigation a{
+    position: relative;
+    height: 45%;
+    width:8%;
+    display: inline-block; 
+    
+}
+.navigation a:before,    
+.navigation a:after{
+    content:'';
+    position: absolute;
+    inset: 0;
+    background: orange;
+    transition: 0.5s ;
+}
+.navigation a:nth-child(1):before,    
+.navigation a:nth-child(1):after{
+    background: linear-gradient(45deg,#00bcd4, #0e1538,#0e1538,#1aff22);
+}
+.navigation a:nth-child(2):before,    
+.navigation a:nth-child(2):after{
+    background: linear-gradient(45deg,#00bcd4, #0e1538,#0e1538,#1aff22);
+}
+.navigation a:nth-child(3):before,    
+.navigation a:nth-child(3):after{
+    background: linear-gradient(45deg,#00bcd4, #0e1538,#0e1538,#1aff22);
+}
+.navigation a:nth-child(4):before,    
+.navigation a:nth-child(4):after{
+    background: linear-gradient(45deg,#00bcd4, #0e1538,#0e1538,#1aff22);
+}
+.navigation a:hover:before{
+inset: -3px;
+}
+.navigation a:hover:after{
+    inset: -3px;
+    filter: blur(10px);
+}
+.navigation a span{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display: inline-block;
+    background: #121b47;
+    z-index:10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: white;
+    font-weight: bold;
+    border: 1px solid #040a29;
+    cursor: pointer;
+}
+        /*=== FIN BUTTON ===*/
+
+.mainIndex{
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    margin-bottom: 3%;   
+    
+}
+.placement_titre_accueil{
+    width: 100%;
+    font-size: x-large;
+    background-color: #121b47;
+    color: #fff;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    text-align: center;
+}
+.placement_titre_accueil h1{
+    margin: 0;
+    font-size: larger;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.containerCard{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+.card{
+    position: relative;
+    width: 59%;
+    display: flex;
+    flex-direction: column;
+    background:#121b47; 
+    color: #fff;   
+}
+/*=== card border ===*/
+.card:before{
+    content:'';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+}
+.card:after{
+    content:'';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(20px);
+}
+.card:before,
+.card:after{
+  background: linear-gradient(235deg,#89ff00,#040a29,#00bcd4);
+}
+.placementImage{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;  
+}
+.textProduit{
+    margin-left: 6%; 
+    box-sizing: border-box;
+}
+.acheter{
+    display: flex;
+   justify-content: space-around;
+    margin-top: 10%; 
+}
+.btnAcheter{
+    padding: 7%;
+    border: solid white 1.5px;
+    color: #fff;
+    background: none;
+    transition: 1.5s;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 65%;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+.placement_btn_acheter{
+    display: flex;
+    width: 35%;
+    font-size: larger;
+    font-weight: bolder;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    margin-right: 15%;
+    column-gap: 10%;   
+}
+.btnAcheter:hover{
+    color:black;
+    background: #89ff00;
+    box-shadow: 0 0 10px #89ff00,
+                0 0 30px #89ff00,
+                0 0 60px #89ff00,
+                0 0 100px #89ff00;
+}
+.prix{
+    font-weight: bold;
+}
+.nomProd{ 
+    margin-top: 1%;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+}
+
+    /* === CARROUSEL === */
+
+    .carousel {
+        margin-top: 1%;
+        overflow: hidden;
+        width: 60%;
+        height:300px;
+        position: relative;
+        border: #040a29;
+    } 
+    .carousel .carousel_img,
+    .carousel .carousel_img--hidden {
+        display: none;
+    }   
+    .carousel .carousel_img img {
+        width: 100%;
+    }  
+    .carousel .carousel_img--visible {
+        display: block;
+        animation: carouselFade 0.5s;
+    }
+    .carousel .carousel_actions {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .carousel .carousel_actions button {
+        border-radius: 50px;
+        font-size: x-large;
+        color: white;
+        background: none;
+        border: 0;
+    }
+    
+    .carousel .carousel_actions button:hover {
+        cursor: pointer;
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    
+    .carousel .carousel_actions button#carousel_button--prev {
+        margin-left: 30px;
+    }
+    
+    .carousel .carousel_actions button#carousel_button--next {
+        margin-right: 30px;
+    }
+    
+    
+    @keyframes carouselFade {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: opacity linear;
+        }
+    }
+    /* === end carousel === */
+
+     /* ============= FIN ACCUEIL =============== */
+
+     /* ============= PAGE INSCRIPTION =============== */
+.mainInscription{
+    display: flex;
+    align-items: center;
+    flex-direction: column;  
+}
+.titreInscription{
+    margin-top: 3%;
+}
+.FormInscription{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-top: 1%;   
+}
+.FormInscription table{
+    width: 70%;
+}
+.FormInscription input{
+    margin-top: 8%;
+    margin-bottom: 3%;
+    padding: 1.5%;
+    width: 90%;
+    outline: none;
+    font-size: large;
+    border-radius:25px ;
+}
+
+.btnInscription{
+    margin-top:5%;
+    margin-bottom: 5%;
+    padding: 1.5%;
+    width:30%;  
+    transition: 1.5s;
+    font-weight: bold;
+    font-size: 100%;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.btnInscription:hover{
+    background: #89ff00;
+    box-shadow: 0 0 10px #89ff00,
+                0 0 30px #89ff00,
+                0 0 60px #89ff00,
+                0 0 100px #89ff00;
+}
+
+    /* ============= FIN PAGE INSCRIPTION =============== */
+
+    /* ============= PAGE CONNEXION =============== */
+    .titreConnexion{
+        margin-top: 2%;
+    }
+    .FormConnexion{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+       
+    }
+    .FormConnexion table{
+        width: 70%;
+    }
+    .FormConnexion input{
+        margin-top: 10%;
+        margin-bottom: 3%;
+        padding: 3%;
+        width: 90%;
+        outline: none;
+        font-size: large;
+        border-radius: 25px;
+    }
+    .FormConnexion a {
+        color: white;
+    }
+    .card2{
+        margin-top: 2%;
+        width:27%;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5%;   
+    }
+    .btnConnexion{
+        margin-top:5%;
+        margin-bottom: 3%;
+        padding: 1%;
+        width:25%;
+        font-weight: bold;
+        font-size: larger;
+        border: none;
+        transition: 1.5s;
+        border-radius: 25px;
+        cursor: pointer;
+        box-sizing: border-box;
+      
+    }
+    .btnConnexion:hover{
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    .btnConnexionInscription{
+        margin-top:5%;
+        margin-bottom: 3%;
+        padding: 2%;
+        width:35%;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: larger;
+        border: none;
+        transition: 1.5s;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+    .btnConnexionInscription:hover{
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    .engagement{
+        margin-top: 3%;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .erreur{
+        font-weight: bold;
+        color:  red;
+    }
+    /* ============= FIN PAGE CONNEXION =============== */
+
+    /* ============ PAGE RECOVER PASSWORD ============*/
+
+    .titrePassword{
+        font-size: x-large;
+        text-decoration: underline;
+        margin-top: 5%;
+    }
+
+    /* ============== BOUTIQUE ================ */
+    
+    .mainBoutique{
+        margin-bottom: 3%;
+    }
+    .categorie{
+        position: relative;
+        background-color: #121b47 ;
+        width: 70%;
+        margin: auto;
+        display: flex; 
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        color: white;     
+    }
+    .categorie:before{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    .categorie:after{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -2;
+        filter: blur(20px);
+    }
+    .categorie:before,
+    .categorie:after{
+    
+      background: linear-gradient(235deg,#89ff00,#040a29,#00bcd4);
+    }
+    .produitPlacement{
+        width:15%;
+        margin-left: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;   
+    }
+    .titreCat{
+        font-size: x-large;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .imgBoutique{
+        width: 90%;
+        height: 60%;
+        margin-top: 5%;
+    }
+    .acheter_boutique{
+        display: flex; 
+        margin-right: 25%;
+        margin-bottom: 5%;
+    }
+    .placementPrix{
+      margin-right:  4%;
+      margin-left: 8%;
+    }
+    .placement_btn_acheter_boutique{
+        display: flex;
+        column-gap: 10%;
+        width: 45%;
+        margin-right: 5%;
+    }
+    .btnAcheter_boutique{
+    padding: 6%;
+    border: none;
+    transition: 1.5s;
+    border-radius: 25px;
+    cursor: pointer;
+    }
+    .btnAcheter_boutique:hover{
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    
+    /* ========= FIN BOUTIQUE ========== */
+
+    /* ========= Page Profil ========== */
+    .mainProfil{
+        display: flex;
+        align-items: center; 
+        flex-direction: column;
+        margin-bottom: 3%;    
+    }
+    .btnAdmin{
+        margin-top: 1%;
+        margin-left: 3%;
+        background-color: #121b47;
+        color: #fff;
+        padding: 1%;
+        border: none;
+        font-weight: bold;
+        transition: 1s;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+    .btnAdmin:hover{
+        color: black;
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    .titreProfil{
+        text-decoration: underline;
+    }
+    .FormProfil{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        margin-top: 2%; 
+    }
+    .FormProfil table{
+        width: 70%;
+        margin-top: 3%;
+    }
+    .FormProfil label{
+        font-size: 120%;
+    }
+
+    .FormProfil input{
+        margin-bottom: 3%;
+        margin-top: 1.5%;
+        padding: 2%;
+        width: 90%;
+        outline: none;
+        font-size: large;
+        border-radius: 25px;
+    }
+
+    /* ========= FIN PAGE PROFIL ======== */
+
+    /* ======== PAGE ADMIN ==========*/
+    .mainAdmin{
+        width: 100%; 
+        height: 100%;
+    }
+    .TitreAdmin{
+        text-align: center;
+        text-decoration: underline;
+    }
+    .placementAdmin{
+        height: 10%;
+        width: 100%;
+    }
+    .PlacementTableau{
+        display: flex;   
+        align-items: flex-start;
+    }
+    
+    .container2{
+        width: 80%;
+        margin-top: 2%;     
+        display: flex;
+        justify-content: space-around; 
+    }
+        
+    .container5{
+        width: 80%;
+        margin-top: 2%;     
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card3{
+        width: 80%;
+        position: relative;
+        background:#040a29; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #fff;  
+    }
+    /*=== card border ===*/
+
+    .card3:before{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    .card3:after{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -2;
+        filter: blur(20px);
+    }
+    .card3:before,
+    .card3:after{     
+      background: linear-gradient(235deg,#89ff00,#040a29,#00bcd4);
+    }
+    .tableAdmin{
+        background-color: #545179;
+        width: 90%; 
+        margin-bottom: 2%;
+    }
+    .tableAdmin th {
+       font-size: medium;
+    }
+    .TRcolor{
+        background-color: #040a29;
+    }
+   
+    #linkColor{
+        color: white;
+        text-decoration: none;
+    }
+    #linkColor2{
+        background-color:#040a29;
+        color: white;
+        border: white;
+        cursor: pointer;
+        font-size: 100%;
+    }
+    #linkColor2:hover{
+        color: red;
+    }
+    #linkColor:hover{
+        color: red;    
+    }
+    #popUp {
+        display: none;
+        position: absolute;
+        left: 37%;
+        width:25%;
+        margin-top: -40%;      
+    }
+    .containerPopup2 {
+        background-color: #545179;
+        display: flex;
+        flex-direction: column;   
+        border-radius: 25px;
+        align-items: center;
+    }  
+    .closeStyle2 {
+        border: none;
+        align-self: flex-end;
+        width: 8%;
+        background-color: #b0a4a4;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+    .FormPopup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;   
+    }
+    .FormPopup table{
+        width: 80%;
+        font-weight: bold;
+    }
+    .FormPopup input{
+        margin-top: 3%;
+        margin-bottom: 3%;
+        padding: 1.5%;
+        width: 90%;
+        outline: none;
+        border-radius:25px ;
+    }
+    .desc_prod{
+        margin-top: 3%;
+    }
+    .select{
+        margin-bottom: 4%;
+    }
+    .btnProduct {
+        display: flex;
+        justify-content: center;
+        background-color: #121b47;
+        color: #fff;
+        padding: 1.5%;
+        margin-top: 4%;
+        cursor: pointer;
+        border: none;
+        transition: 1s;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: larger;
+    }
+    .btnProduct:hover{
+        color: black;
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    .separation{
+        margin-top: 2%;
+        height: 700px;
+    }
+    .modalErreur {
+        display: none; 
+        position: fixed; 
+        z-index: 10; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0, 0, 0, 0.589); 
+      }
+      
+      .modal-content {
+        background-color: #fff;
+        margin: auto;
+        width: 30%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 25px;
+        
+      }
+      
+      .close_modal {
+        color: black;
+        float: right;
+        font-size: 150%;
+        font-weight: bold;
+        cursor: pointer;
+        margin-right: 1%;
+        align-self: flex-end;
+      }
+      .affichage_erreurs{
+        text-align: center;
+      }
+
+    /* ========= Page Panier =========== */
+
+    .mainPanier{
+        display: flex;
+         
+       
+    }
+    .Panier{
+        width: 100%;
+        display: flex;
+    }
+    .PanierVide{
+        width: 100%;
+        margin-top: 5%;
+    }
+    .TitrePanier{
+        text-align: center;
+       
+    }
+    .TitrePanier2{
+        text-align: center;  
+    }
+    .section_produit{
+        width: 60%;
+        margin-bottom: 5%;
+    }
+    .titre_panierVide{
+        text-align: center;
+    }
+    .section_achat{
+        width:40%;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;  
+    }
+    .containerCard_panier{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .containerCard_panierVide{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .containerCard_achat{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-top: 5%;
+    }
+    .textProduit_panier{  
+        width: 80%;
+        margin-left: 10%;
+    }
+    .Alignement{
+        display: flex; 
+        margin-top: 2%;
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+    .Alignement1{
+        text-align: center;
+    }
+    .Alignement1 a{
+        color: #fff;
+    }
+    .cardPanier{
+        position: relative;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        background:#121b47; 
+        color: #fff;   
+    }
+    /*=== card border ===*/
+    .cardPanier:before{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    .cardPanier:after{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -2;
+        filter: blur(20px);
+    }
+    .cardPanier:before,
+    .cardPanier:after{
+      background: linear-gradient(235deg,#89ff00,#040a29,#00bcd4);
+    }
+    .acheter_panier{
+        display: flex;
+        justify-content: space-between;
+        font-size: larger;
+    }
+    .quantite_produit{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .quantite_nombre{
+        color: black;
+        margin-right: 2%;
+        margin-left: 2%;
+        background-color: #fff;
+        width: 5%;
+        text-align: center;  
+        margin-top: 0;  
+        margin-bottom: 0;
+    }
+    .btn_quantite{
+        font-size: large;
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+        width: 6%;
+        transition: 1s;
+        border-radius: 0 25% 25% 0;
+    }
+    .btn_quantite:hover{
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    .btn_quantite2{
+        font-size: large;
+        cursor: pointer;
+        background-color: #fff;
+        border: none;
+        width: 6%;
+        transition: 1s;
+        border-radius: 25% 0 0 25%;
+    }
+    .btn_quantite2:hover{
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    .closeStyle3 {
+        border: none;
+        width: 5%;
+        height: 3%; 
+        margin-right: 1%;
+        border-radius: 25px;
+        cursor: pointer;
+        background-color: #fff;
+        
+    }
+    .closeStyle3 img{
+        width: 80%;
+        padding-top: 1%;
+    }
+    .cardPanier2{
+        position: relative;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        background:#121b47; 
+        color: #fff;  
+        text-align: center; 
+        
+    }
+    /*=== card border ===*/
+    .cardPanier2:before{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    .cardPanier2:after{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -2;
+        filter: blur(20px);
+    }
+    .cardPanier2:before,
+    .cardPanier2:after{
+      background: linear-gradient(235deg,#89ff00,#040a29,#00bcd4);
+    }
+    .cardPanier2 li {
+        list-style: none;
+       margin-top: 2%;
+    }
+    .cardPanier3{
+        position: relative;
+        width: 60%;
+        margin-top: 5%;
+        display: flex;
+        
+        background:#121b47; 
+        color: #fff;   
+    }
+    /*=== card border ===*/
+    .cardPanier3:before{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    .cardPanier3:after{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -2;
+        filter: blur(20px);
+    }
+    .cardPanier3:before,
+    .cardPanier3:after{
+      background: linear-gradient(235deg,#89ff00,#040a29,#00bcd4);
+    }
+    .paiementPanier{
+        width: 50%;
+       text-align: center;
+    }
+    .livraisonPanier{
+        width: 50%;
+        text-align: center;       
+    }
+    .btnCommander{
+        width: 30%;
+        text-align: center;
+        margin-top: 3%;
+        padding: 1%;
+        border-radius: 25px;
+        background-color: #121b47;
+        color:#fff;
+        border: none;
+        cursor: pointer;
+        transition: 1s;
+        font-weight: bold;
+    }
+    .btnCommander:hover{
+        color: black;
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    /* ========= PAGE PRODUIT ========= */
+
+    .cardProduit{
+        position: relative;
+        width: 55%;
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background:#121b47; 
+        color: #fff;   
+    }
+    /*=== card border ===*/
+    .cardProduit:before{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -1;
+    }
+    .cardProduit:after{
+        content:'';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: #fff;
+        z-index: -2;
+        filter: blur(20px);
+    }
+    .cardProduit:before,
+    .cardProduit:after{
+      background: linear-gradient(235deg,#89ff00,#040a29,#00bcd4);
+    }
+    .descProd{
+        display: flex;
+        width: 100%;
+    }
+    .detailProduit{
+        width: 70%;
+        margin-top: 2%;
+        margin-left: 5%;
+        font-size: larger;
+    }
+    .achat{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .btnAcheterProduit{
+        padding: 2%;
+        width: 40%;
+        margin-right: 8%;
+        border: solid white 1.5px;
+        align-self: end;
+        color: #fff;
+        background: none;
+        transition: 1s;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 100%;
+        font-weight: 900;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;       
+    }
+    .btnAcheterProduit:hover{
+        color:black;
+        background: #89ff00;
+        box-shadow: 0 0 10px #89ff00,
+                    0 0 30px #89ff00,
+                    0 0 60px #89ff00,
+                    0 0 100px #89ff00;
+    }
+    .alignPrix{
+        align-self: flex-end;
+        margin-right: 14%;
+        margin-top: 3%;
+        font-size: x-large;
+    }
+
+    /*===== Media queries ====*/
+@media screen and (max-width:1935px) {
+    .btnConnexionInscription{
+        font-size: 95%;
+    }
+    
+}
+@media screen and (max-width:1860px) {
+   .mainIndex{
+    margin-bottom: 0;
+   }
+   .container{
+    flex-wrap: wrap;
+   }
+   .containerCard{
+    margin-bottom: 2%;
+   }
+   .btnConnexion{
+    font-size: 90%;
+   }
+   .closeStyle2{
+    width: auto;
+   }
+
+}
+@media screen and (max-width:1550px) {
+    .footer{
+        font-size: 70%;
+    }
+    .btnConnexionInscription{
+        width: 60%;
+    }
+    .FormConnexion{
+        width:30%;
+    }
+    .card2{
+        width:35%;
+    }
+    .mainProfil{
+        justify-content: center;
+        margin: 0%;
+    }
+    .containerPopup2{
+        width: 100%;
+    }
+    .FormPopup{
+        text-align: center;
+    }
+    .FormPopup input{
+        width: 75%;
+    }
+    .FormPopup textarea{
+        width: 75%;
+    }
+    .closeStyle2{
+        width: auto;
+       }
+}
+@media screen and (max-width:1300px) {
+    .btnConnexion{
+        width:40%;
+       }
+       .FormConnexion{
+        width:40%;
+    }
+    .card2{
+        width:45%;
+    }
+    .titreInscription{
+        font-size:150%;      
+    }
+    .FormProfil {
+        width:35%;
+    }
+    .cardProduit{
+        width: 60%;
+        height: 70%;
+    }
+    .cardProduit img{
+        width:40%;
+    }
+    .btnAcheterProduit{
+        width: 60%;
+    }
+    .PlacementTableau{
+        display: initial;
+        justify-content: center;
+        align-items: center;
+    }
+    .separation{
+        height: 0;
+    }
+    .container2{
+        width: 100%;
+    }
+    .container5{
+        width: 100%;
+    }
+    .btnProduct{
+        margin-bottom: 5%;
+    }
+    .navigation a{
+        font-size: 70%;
+    }
+    .imgPanier{
+        width:30%;
+    }
+    .closeStyle3{
+        width:8%;
+    }
+    #popUp{
+        margin-top: -75%;
+    }
+    .closeStyle2{
+        width: auto;
+       }
+}
+@media  screen and (max-width:1070px) {
+    .carousel{
+        height: 50%;
+    }
+    .footer img{
+        width:40%;
+    }
+    .FormConnexion{
+        width:40%;
+        margin-bottom: 5%;
+    }
+    .card2{
+        width:45%;
+    }
+    .cardProduit img{
+        width:50%;
+    }
+    .Panier{
+        font-size: 90%;
+    }
+    .closeStyle2{
+        width: auto;
+       }
+
+}
+@media screen and (max-width: 1139px) {
+    .Slogan{
+        font-size:80%;
+    }
+    .btnAcheter{
+    font-size: 50%;
+    }
+    .btnConnexion{
+        font-size:80%;
+    }
+    .FormProfil {
+        width:40%;
+    }
+    .FormInscription{
+        width:40%;
+    }
+    .produitPlacement{
+        width: 30%;
+    }
+    .closeStyle3{
+        width: 8%;
+    }
+    #popUp{
+        margin-top: -80%;
+    }
+    .containerPopup2{
+        width: 130%;
+    }
+    .FormPopup{
+        text-align: center;
+    }
+    .FormPopup input{
+        width: 75%;
+    }
+    .FormPopup textarea{
+        width: 75%;
+    }
+    .closeStyle2{
+        width: auto;
+       }
+
+}
+@media screen and (max-width: 915px) {
+    .btnAcheter{
+    font-size: 40%;
+    }
+    .FormInscription{
+        width:50%;
+    }
+    .FormProfil {
+        width:40%;
+    }
+    .cardProduit img{
+        width:60%;
+    }
+    .btnAcheterProduit{
+        width:65%;
+    }
+    .Panier{
+        display:inline-grid;
+        margin: 0;
+    }
+    .section_produit{
+        width: 100%;
+        margin: 0;
+    }
+    .section_achat{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+    .TitrePanier{
+        margin-top: 3%;
+    }
+    .TitrePanier2{
+        margin-top: 5%;
+    }
+    .cardPanier2{
+       width: 62%;
+    }
+    .cardPanier3{
+        width: 62%;
+    }
+    .navigation a {
+        font-size: 60%;
+    }
+    .closeStyle2{
+        width: auto;
+       }
+  
+}
+@media screen and (max-width: 800px) {
+ .placement_btn_acheter{
+    display: flex;
+    flex-direction: column;
+    font-size: 45%;
+    transition: none;
+ }
+ .Slogan{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+ }
+
+ .btnAcheter{
+    margin-bottom: 15%;
+    margin-left: 15%;
+    width: 100%;
+ }
+ .carousel{
+    height: 20%;
+}
+.container{
+    height:65%;
+}
+.containerCard{
+    height: 40%;  
+}
+.nomProd{
+    font-size: 90%;
+}
+
+.FormConnexion{ 
+    margin-bottom: 8%;
+}
+.FormInscription{
+    width:50%;
+}
+.engagement{
+    font-size: 100%;
+}
+.titreInscription{
+    margin-top: 15%;
+}
+.titreConnexion{
+    margin-top: 15%;
+}
+.produitPlacement{
+    width: 45%;
+}
+.titreProfil{
+    font-size: 150%;
+}
+.FormProfil {
+    width:50%;
+}
+.cardProduit img{
+    width:65%;
+}
+.btnAcheterProduit{
+    width: 70%;
+}
+.card3{
+    width: 90%;
+}
+.navMobile{
+    display: block;
+    cursor: pointer;
+    width: 5%;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+.navigation{
+    position: absolute;
+    z-index: 5;
+    left: 0px; 
+    bottom: 73px; 
+    top:35px;
+    width:200px; 
+    background-color:#121b47;
+    transform: translateX(-300px); 
+ text-align: center; 
+}
+.navigation a{
+    width: 80%;
+    height: 4%;
+    margin-top: 5%;
+    
+}
+.openMenu .navigation{
+    transform:translateX(0px);
+    transition: 0.7s;
+    display: block;
+}
+#popUp{
+    margin-top: -114%;
+}
+.containerPopup2{
+    width: 151%;
+}
+.FormPopup{
+    text-align: center;
+}
+.FormPopup input{
+    width: 75%;
+}
+.FormPopup textarea{
+    width: 75%;
+}
+.closeStyle2{
+    width: auto;
+   }
+
+}
+@media  screen and (max-width:650px) {
+    .Slogan{
+        font-size: 65%;
+    }
+    .carousel{
+        height: 25%;
+    }
+    .footer{
+        font-size: 60%;
+    }
+    .containerCard{
+        height: 35%;
+    }
+    .FormProfil {
+        width:60%;
+    }
+    .FormConnexion{
+        width:55%;
+        margin-bottom: 10%;
+    }
+    .card2{
+        width:65%;
+    }
+    .FormInscription{
+        width:60%;
+    }
+    .engagement{
+        font-size: 90%;
+    }
+    .titreInscription{
+        font-size:130%;      
+    }
+    .titreConnexion{
+        font-size: 130%;
+    }
+    .titreProfil{
+        font-size: 130%;
+    }
+    .btnAcheterProduit{
+        width: 80%;
+    }
+    .tableAdmin th{
+        font-size: 80%;
+    }
+    .detailProduit{
+        font-size: 80%;
+    }
+    .alignPrix{
+        font-size: 100%;
+    }
+    .Panier{
+    font-size: 70%;
+    }
+    .closeStyle2{
+        width: auto;
+       }
+}
+@media  screen and (max-width:500px) {
+    .Slogan{
+        font-size: 65%;
+    }
+    .footer{
+        font-size: 40%;
+    }
+    .container{
+        margin-top: 3%;
+    }
+    .containerCard{
+        height: 36%;
+    }
+    .card{
+        height:115%;
+    }
+    .card2{
+        height: 80%;
+        margin-bottom: 15%;
+    }
+    .nomProd{
+        font-size: 70%;
+        margin-bottom: 10%;
+    }
+    .prix{
+        font-size:60%;
+    }
+    .card img{
+        width: 85%;
+        margin-bottom: 10%;
+    }
+    .FormInscription{
+        width:70%;
+        height: 70%;
+    }
+    .engagement{
+        font-size: 80%;
+    }
+    .titreInscription{
+        font-size:150%;  
+    }
+    .titreConnexion{
+        font-size: 150%;
+    }
+    .titreProfil{
+        font-size: 150%;
+    }
+    .FormProfil {
+        width:60%;
+        height: 60%;
+    }
+    .btnAdmin{
+        margin-top: 5%;
+    }
+    .btnAcheterProduit{
+        width: 100%;
+    }
+    .cardProduit img{
+        width:80%;
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+    .cardProduit {
+        height: 60%;
+    } 
+    .closeStyle3{
+        width: 10%;
+    }
+    .PanierVide{  
+        margin-top: 45%;
+    }
+    #popUp{
+        width:55%;
+        margin-left: -29%;
+        margin-top: -135%;  
+    }
+   .closeStyle2{
+    width: auto;
+   }
+   .modal-content {
+    width: 70%;
+}
+}
